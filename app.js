@@ -56,5 +56,5 @@ app.use("/tools/:id/comments",commentRoutes);
 // });
 
 app.listen(process.env.port, process.env.IP, function(){
-	console.log("YelpCamp Server Has Started!");
+	console.log("OmicsSource Server Has Started!");
 });
