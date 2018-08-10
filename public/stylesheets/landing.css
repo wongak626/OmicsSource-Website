@@ -1,0 +1,24 @@
+h1 {
+	color: white;
+	letter-spacing: 3px;
+	text-shadow: 2px 2px #000000;
+	text-align: center;
+	margin: auto;
+	padding: 200px 0;
+	font-size: 4em;
+
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+
+.bg {
+	background-image:url("https://cdn.pixabay.com/photo/2013/07/18/10/55/dna-163466_1280.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

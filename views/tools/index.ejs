@@ -1,0 +1,35 @@
+<% include ../partials/header%>
+
+
+<div class="container">
+<header class="jumbotron">
+	<div class="container">
+	<h1>Welcome To OmicsSource!</h1>
+	<p>View user-submitted bioinformatics open source tools from all over the world.</p>
+	<p>
+		<a class="btn btn-primary btn-large" href="/tools/new"> Add New Tool </a>
+	</p>
+	</div>
+</header>
+
+<div class="panel-group">
+	<% tools.forEach(function(tool){ %>
+	<div class="panel panel-default">
+	<div class="panel-heading"><strong><%= tool.name %></strong></div>
+	<div class="panel-body">
+		<%= tool.description%>
+	<div class="row">
+		<button class="btn"><i class="fa fa-thumbs-o-up"></i> <%= tool.upvotes %></button>
+	</div>
+			<p>
+			<a href="/tools/<%= tool._id%>" class="btn btn-primary">More Info</a>
+		</p>
+	</div>
+	</div>
+	<% }); %>
+</div>
+
+
+</div>
+
+<% include ../partials/footer%>

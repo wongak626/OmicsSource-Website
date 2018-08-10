@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+<div class="container">
+	<div class="row">
+
+	<h1 style="text-align: center;">Enter A New Bioinformatics Tool</h1>
+	<div style="width: 30%; margin: 20px auto;">
+	<form action="/tools" method="POST">
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "name" placeholder="name">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "url" placeholder="repository URL">
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" name="description" placeholder= "description">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "version" placeholder="version number">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "input" placeholder="input data type(s)">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "output" placeholder="output data type(s)">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "opSystem" placeholder="operating systems(s)">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "language" placeholder="written in this language(s)">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "license" placeholder="license">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "researchArticle" placeholder="cited in this research paper(s)">
+		</div>
+		<div class="form-group">
+			<input class = "form-control" type = "text" name= "maintainer" placeholder="maintainer(s)">
+		</div>
+		<hr>
+		<div class="text-center">
+		<label class ="checkbox-inline"><input type="checkbox" name = "software" value="Software">Software</label>
+		<label class ="checkbox-inline"><input type="checkbox" name = "database"value="Database">Database</label>
+		</div>
+		<hr>
+		<div class="form-group">
+			<button class="btn btn-lg btn-primary btn-block"> Submit</button>
+		</div>
+	</form>
+		<a href="/tools">Go Back</a>
+	</div>
+	</div>
+</div>
+<% include ../partials/footer %>
