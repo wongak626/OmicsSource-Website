@@ -51,6 +51,10 @@ app.use("/",indexRoutes);
 app.use("/tools",toolRoutes);
 app.use("/tools/:id/comments",commentRoutes);
 
-app.listen(process.env.port || 4000, function(){
+// app.listen(process.env.port || 4000, function(){
+// 	console.log("YelpCamp Server Has Started!");
+// });
+
+app.listen(process.env.port, process.env.IP, function(){
 	console.log("YelpCamp Server Has Started!");
 });
