@@ -16,7 +16,9 @@ var commentRoutes    = require("./routes/comments"),
 	indexRoutes      = require("./routes/index")
 
 
-mongoose.connect("mongodb://localhost:27017/OmicsSource",{ useNewUrlParser: true });
+//mongoose.connect("mongodb://localhost:27017/OmicsSource",{ useNewUrlParser: true });
+mongoose.connect("mongodb://alex:password626@ds119052.mlab.com:19052/omicssource");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
