@@ -16,7 +16,7 @@ body, html {
 
 
 .bg {
-	background-image:url("/../images/dna-163466_1280.jpg");
+	background-image:url("/../public/images/dna-163466_1280.jpg");
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
