@@ -119,7 +119,7 @@ router.post("/:id/like",function(req,res){
 			console.log("this worked");
 			foundTool.upvotes = foundTool.upvotes + 1; 
 			foundTool.save();
-			res.redirect("/:id");
+			res.redirect("/tools");
 			
 		}
 	});
