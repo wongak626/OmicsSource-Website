@@ -110,5 +110,19 @@ router.delete("/:id", middleware.checkToolOwnership,function(req,res){
 	});
 });
 
+// ADD LIKE
+router.post("/:id/like",function(req,res){
+	Tool.findById(req.params.id, function(err, foundTool){
+		if(err){
+			res.redirect("/tools");
+		} else {
+			console.log("this worked");
+			foundTool.upvotes = foundTool.upvotes + 1; 
+			foundTool.save();
+			res.redirect("/:id");
+			
+		}
+	});
+});
 
 module.exports = router;

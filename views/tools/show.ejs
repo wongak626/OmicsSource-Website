@@ -5,6 +5,7 @@
 		<div class="col-md-9">
 			<div class="well">
 			<h1><a><%=tool.name%></a></h1>
+
 			<hr>
 			<h4><u>Description</u></h4>
 			<p><%= tool.description%></p>
@@ -25,9 +26,11 @@
 			<em>Submitted By <%= tool.author.username %></em>
 			</p>
 			
-				<button class="btn btn-success" style="font-size:18px" name="tool">Like <i class="fa fa-thumbs-o-up"></i></button>
-	
+				<form action="/tools/<%= tool._id%>/like/" method="POST">
+					<button class ="btn btn-success" style="font-size:18px"><i class="fa fa-thumbs-o-up"></i> Like</button>
+				</form>
 
+			<p><em>Liked by <%= tool.upvotes %> users</em></p>
 			<% if(currentUser && tool.author.id.equals(currentUser._id)){%> 
 			<a class="btn btn-warning" href="/tools/<%= tool._id%>/edit">Edit</a>
 			<form id="delete-form" action="/tools/<%= tool._id %>?_method=DELETE" method="POST">
@@ -64,6 +67,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 <% include ../partials/footer %>

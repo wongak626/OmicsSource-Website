@@ -10,6 +10,7 @@ var express    = require("express"),
 	Comment    = require("./models/comment"),
 	User       = require("./models/user"),
 	seedDB     = require("./seeds")
+	
 
 var commentRoutes    = require("./routes/comments"),
 	toolRoutes       = require("./routes/tools"),
@@ -22,6 +23,7 @@ mongoose.connect("mongodb://alex:password626@ds119052.mlab.com:19052/omicssource
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+//app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 app.use(flash());
 
@@ -52,7 +54,7 @@ app.use("/tools",toolRoutes);
 app.use("/tools/:id/comments",commentRoutes);
 
 
-// app.listen(process.env.port || 3000, function(){
+// app.listen(process.env.port || 4000, function(){
 // 	console.log("YelpCamp Server Has Started!");
 // });
 
