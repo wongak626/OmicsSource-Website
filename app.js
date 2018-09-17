@@ -17,8 +17,8 @@ var commentRoutes    = require("./routes/comments"),
 	indexRoutes      = require("./routes/index")
 
 
-//mongoose.connect("mongodb://localhost:27017/OmicsSource",{ useNewUrlParser: true });
-mongoose.connect("mongodb://alex:password626@ds119052.mlab.com:19052/omicssource");
+mongoose.connect("mongodb://localhost:27017/OmicsSource",{ useNewUrlParser: true });
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -55,7 +55,7 @@ app.use("/tools/:id/comments",commentRoutes);
 
 
 // app.listen(process.env.port || 4000, function(){
-// 	console.log("YelpCamp Server Has Started!");
+// 	console.log("OmicsSource Server Has Started!");
 // });
 
 app.listen(process.env.PORT, process.env.IP, function(){
